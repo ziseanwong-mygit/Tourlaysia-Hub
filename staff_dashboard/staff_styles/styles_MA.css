@@ -1,0 +1,165 @@
+/* Programmer Name: Vun Jin Quan, Group Member of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: styles_MA.css */
+/* Description: To style the universal layout for Mark_Attendance.php*/
+/* Date first written: 1/7/2025 */
+/* Date last modified: 2/7/2025 */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #8ECAE6;
+}
+
+#trip-list-section, #attendance-section {
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+th {
+    background-color: #219EBC;
+}
+
+tbody {
+    background-color:rgb(255, 255, 255);
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    padding: 0.5rem 1rem;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #000000;
+}
+
+.back-btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+select {
+    padding: 5px;
+}
+
+/* Back Icon Button */
+.back-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #D81159;
+}
+
+/* Mark Attendance Button */
+button {
+  padding: 6px 12px;
+  background-color: #000000;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+}
+
+/* Responsive Tables */
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+
+  .back-btn {
+    font-size: 1.3rem;
+  }
+
+  .save-btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  .save-btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+/* Save Button */
+.save-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.save-btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px 24px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+}
+
+.remark-dropdown {
+  padding: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #000000;
+}
+

@@ -1,0 +1,249 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: staff_footer.css */
+/* Description: To style the universal footer for footer.php*/
+/* Date first written: 9/7/2025 */
+/* Date last modified: 9/7/2025 */
+
+.footer {
+    padding: 40px 0px;
+    background: #023047;
+    box-shadow: 0 2px 10px black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.topBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.back-to-top-txt {
+    text-decoration: none;
+    color: ghostwhite;
+    font-size: 1.1rem;
+}
+
+.back-to-top-txt:hover {
+    text-decoration: underline;
+    color: #98CE00;
+    font-weight: bold;
+}
+
+.topBtnDiv #footer-icon {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s ease;
+    font-size: 1.2rem;
+}
+
+.topBtnDiv:hover #footer-icon {
+    color: #98CE00;
+    opacity: 100;
+    visibility: visible;
+}
+
+.footer-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.main-list, .package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: ghostwhite; 
+}
+
+.footer-link:hover {  
+    color: #FFB703;
+    font-weight: bold; 
+}
+
+.footer-link #footer-icon {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s ease;
+    font-size: 1.2rem;
+}
+
+.footer-link:hover #footer-icon {
+    opacity: 100;
+    visibility: visible;
+}
+
+.footer-website {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0.7rem);
+}
+
+.footer-logo {
+    width: 6rem;
+    height: 6rem;
+}
+
+.footer-webname {
+    color: ghostwhite;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.7s ease;
+}
+
+.footer-webname:hover {
+    color: #1d6ade;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.footer-slogan {
+    color: #8ECAE6;
+    font-size: 0.7rem;
+    font-style: italic;
+    padding-top: 5px;
+}
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+    color: #219EBC;
+}
+
+.footer-contact-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contact, .contact-divider {
+    color: #219EBC;
+    padding: 0px 3px;
+}
+
+.footer-line {
+    border: 1px solid ghostwhite;
+}
+
+.footer-note-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-note {
+    margin: 20px 30px 0px 30px;
+    color: #8ECAE6;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/*
+@media screen and (max-width: 960px) {
+  .footer-contact-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-divider {
+    display: none;
+  }
+}
+*/
+
+/* For mobile phone and mini tablet screen sizes*/
+@media screen and (max-width: 650px) {
+  .footer-navbar {
+    display: flex;
+    align-items: flex-start;
+    margin: -20px 20px;
+  }
+
+  .footer-website {
+    order: 1;
+    transform: translateX(0rem);
+  }
+
+  .topBtnDiv {
+    margin-bottom: 50px;
+  }
+
+  .topBtnDiv #footer-icon {
+    font-size: 1rem !important;
+  }
+
+  .back-to-top-txt {
+    font-size: 0.9rem;
+  }
+
+  .footer-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .footer-webname {
+    color: ghostwhite;
+    text-decoration: none;
+    font-size: 1.0rem;
+    transition: 0.7s ease;
+  }
+
+  .footer-webname:hover {
+    color: #1d6ade;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .main-list {
+    order: 2;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .package-list {
+    order: 3;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .footer-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .link-text {
+    font-size: 0.7rem;
+  }
+
+  #footer-icon {
+    font-size: 0.8rem !important;
+  }
+
+  .contact-title {
+    margin-top: 30px;
+  }
+}

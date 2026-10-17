@@ -1,0 +1,228 @@
+ /* Programmer Name: Seath Tan Ziren
+Project Name: registerPage.css
+Description: To design booking form pages to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p, li{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.form-container {
+    max-width: 800px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em auto;
+    background-color: #219EBC;
+    border-radius: 20px;
+    border: 4px solid #023047;
+    padding: 2em 3em;
+    /* Shadow effects */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow */
+        inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Inner glow */
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+    
+    /* Gradient background option */
+    background: linear-gradient(135deg, #8ECAE6 0%, #219EBC 100%);
+    
+    /* Text contrast */
+    color: #023047;
+}
+
+/* Hover effect */
+.form-container:hover {
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Optional: Animation on focus */
+.form-container:focus-within {
+    box-shadow: 
+        0 0 0 3px rgba(33, 158, 188, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.instruction-box {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.instruction-box ol{
+    margin: 8px;
+}
+
+.instruction-box h4{
+    /* font-size: 0.85em; */
+    margin: 0;
+}
+
+.instruction-box li{
+    font-size: 0.9em;
+}
+
+.form-container form{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.95em;
+    display: block;
+    margin-bottom: 5px;
+    span{
+        color: red;
+    }
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="tel"], 
+input[type="pax"], 
+input[type="hidden"], 
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.checkbox-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group p {
+    font-size: 0.85em;
+    color: #555;
+    margin: 5px 0 0 26px;
+}
+
+.form-btn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-btn-next{
+    padding: 10px 30px;
+    font-size: 1em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    background-color: #98ce00;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.form-btn-next:hover {
+    background-color: #a8e000; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.form-btn-next:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.form-btn-next:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+.form-btn-back{
+    padding: 10px 30px;
+    font-size: 1em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    background-color: #d81159;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.form-btn-back:hover {
+    background-color: #d82e6c; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.form-btn-back:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.form-btn-back:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+
+@media screen and (max-width: 590px) {
+    .form-container {
+        width: 90%;
+        margin: 5em auto; 
+        padding: 20px;
+    }
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .form-buttons a {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+}

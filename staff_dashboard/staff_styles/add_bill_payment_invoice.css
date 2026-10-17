@@ -1,0 +1,106 @@
+.container {
+    padding: 20px;
+    background-color: #8ECAE6;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.back-btn {
+    background-color: #219EBC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative; /* Changed to relative */
+    margin-left: 20px; /* Aligning the button appropriately */
+}
+
+.back-btn:hover {
+    background-color: #14596b;
+}
+
+h1 {
+    text-align: center;
+    font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+}
+
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #023047;
+}
+
+label {
+    font-family: Georgia, serif;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: calc(100% - 30px); /* Adjusted width for text fields */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #023047;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    background-color: #FFB703;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-group button:hover {
+    background-color: #D81159;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 20px;
+        max-width: 90%;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, select {
+        width: calc(100% - 30px); /* Consistent width on smaller screens */
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input, select {
+        padding: 8px;
+    }
+}

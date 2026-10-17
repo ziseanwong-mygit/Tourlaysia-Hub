@@ -1,0 +1,274 @@
+ /* Programmer Name: Seath Tan Ziren
+Project Name: registerPage.css
+Description: To design booking history page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.history-container {
+    margin: 2em auto;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.back-nav{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.back-nav button{
+    display: flex;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    background-color: #FFB703;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    h3{
+        margin-left: 10px;
+    }
+}
+
+.back-nav button:hover {
+  background-color: #eecf7f;
+}
+
+.back-nav img{
+    height: 20px; 
+    cursor: pointer;
+}
+
+.filter-box{
+    margin: 0 auto;
+    max-width: 600px;
+    background: #fff;
+    border: 4px solid #023047;
+}
+
+.history-card {
+    max-width: 800px;
+    margin: 2em auto;
+    border-radius: 20px;
+    border: 4px solid #023047;
+    background: linear-gradient(135deg, #8ECAE6 0%, #219EBC 100%);
+}
+
+.filter-box,
+.history-card {
+    border-radius: 20px;
+
+    /* Shadow effects */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow */
+        inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Inner glow */
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+    
+    /* Text contrast */
+    color: #000;
+}
+   
+
+/* Hover effect */
+.filter-box:hover 
+.history-card:hover {
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Optional: Animation on focus */
+.filter-box:focus-within,
+.history-card:focus-within {
+    box-shadow: 
+        0 0 0 3px rgba(33, 158, 188, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.filter-box h3, 
+.history-card h3 {
+    margin: 0;
+    padding: 0.8em 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid #023047;
+}
+
+/* filter form */
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 25px;
+    padding: 2em;
+}
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="date"], 
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.form-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-btn-search{
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    background-color: #98ce00;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.form-btn-search:hover {
+    background-color: #a8e000; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.form-btn-search:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.form-btn-search:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+.form-btn-reset{
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    background-color: #d81159;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.form-btn-reset:hover {
+    background-color: #d82e6c; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.form-btn-reset:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.form-btn-reset:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+
+/* history card */
+.history-card strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.history-card p {
+    margin: 1em 0;
+}
+
+.history-card div {
+    padding: 1em 2em;
+}
+
+@media screen and (max-width: 590px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .history-container {
+        margin: 3em auto;
+    }
+    .filter-box {
+        width: 80%;
+    }
+    .history-card {
+        width: 90%;
+    }
+    .filter-form {
+        gap: 10px;
+        padding: 10px 20px;
+    }
+    label {
+        font-size: 0.8em;
+    }
+
+    input[type="date"], 
+    select {
+        font-size: 0.8em;
+    }
+    .form-btn button{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

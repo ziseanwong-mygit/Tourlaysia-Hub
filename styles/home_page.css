@@ -1,0 +1,573 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: home_page.php */
+/* Description: To style the home page such as carousel, grid layout, media queries for responsive design and other elements*/
+/* Date first written: 8/7/2025 */
+/* Date last modified: 8/7/2025 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.home-title-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-title {
+    font-size: 2.4rem;
+    text-align: center;
+    color: #2634d1;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+.home-desc {
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: center;
+}
+
+.home-desc a {
+    color: black;
+    transition: 0.3s ease;
+}
+
+.home-desc a:hover {
+    color: blue;
+    background-color: #FFB703;
+}
+
+.home-desc span {
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
+    color: yellow;
+    font-weight: bold;
+}
+
+
+/* Grid styling */
+.main-container {
+    display: grid;
+    grid-template-areas:
+      "sidebar action"
+      "sidebar feedback"
+      "bookings bookings"
+      "bills bills"
+      "packages packages";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 35px 40px; /* row-gap column-gap */
+    margin: 30px 16px 80px 16px; /* reduce margin for small screens */
+}
+
+.main-container aside, .main-container .feedback-section, .main-container .action-section {
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.main-container .action-section, .main-container .feedback-section {
+    background-color: #219EBC;
+    border: 4px solid #023047;
+}
+
+.main-container .bookings-section, .main-container .bills-section, .main-container .packages-section {
+    background-color: #8ECAE6;
+    border: 4px solid #023047;
+    border-radius: 10px;
+}
+
+.main-container > .account-sidebar {
+    grid-area: sidebar;
+}
+
+.main-container > .action-section {
+    grid-area: action;
+}
+
+.main-container > .feedback-section {
+    grid-area: feedback;
+}
+
+.main-container > .bookings-section {
+    grid-area: bookings;
+}
+
+.main-container > .bills-section {
+    grid-area: bills;
+}
+
+.main-container > .packages-section {
+    grid-area: packages;
+}
+
+
+/* User Profile Sidebar */
+.account-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #023047;
+    border: 4px solid ghostwhite;
+    color: ghostwhite;
+}
+
+.account-sidebar .sidebar-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-info-div .sidebar-img-div {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    margin: 25px auto;
+}
+
+.sidebar-img-div .sidebar-img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-img-div .loginpic {
+    background-color: #023047;
+    padding: 3px;
+}
+
+.loginpic {
+    border: 5px solid #FFB703;
+}
+
+.info-text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: -1.5rem 0 0 1rem;
+}
+
+.sidebar-info-div .accInfo {
+    font-size: 1rem;
+}
+
+.sidebar-info-div .accInfo .accLabel {
+    font-size: 1.1rem;
+}
+
+.sidebar-btn-div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 30px 10px;
+    gap: 20px;
+}
+
+.sidebar-btn-div .sidebar-btn {
+    font-size: 0.9rem;
+    border: 2px solid ghostwhite;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px black;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #219EBC;
+    color: ghostwhite;
+    font-weight: bold;
+}
+
+.sidebar-btn-div .sidebar-btn:hover {
+    background-color: #166376;
+    color: #FFB703;
+}
+
+
+/* Universal styling for all sections */
+section .header-title {
+    margin: 10px 0px 20px 0px;
+    color: #09226e;
+}
+
+section .header-title2, section .header-title3 {
+    color: aqua;
+}
+
+
+/* Styling for list of actions section */
+.action-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-btn-div {
+    display: block;
+}
+
+.actionBtn {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #135ad5;
+    color: ghostwhite;
+    border: 2px solid wheat;
+    border-radius: 7px;
+    font-size: 0.75rem;
+}
+
+.actionBtn:hover {
+    border: 3px solid goldenrod;
+    font-weight: bold;
+}
+
+
+/* Styling for list of feedback section */
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-section form {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.feedback-section #feedbackArea {
+    padding: 10px;
+    resize: none;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    max-height: 1200px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.feedback-section button[type="submit"] {
+    padding: 7px;
+    cursor: pointer;
+    background-color: #98CE00;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.feedback-section button[type="submit"]:hover {
+    font-weight: bold;
+    color: yellow;
+}
+
+
+/* Booking section styling */
+.bookings-header, .bills-header, .packages-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #140247;
+    padding: 25px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.moreBtn {
+    padding: 15px;
+    color: ghostwhite;
+    cursor: pointer;
+    background-color: #219EBC;
+    border: 3px solid black;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.moreBtn:hover {
+    background-color: #176c82;
+}
+
+
+/* Carousel Styling */
+.booking-carousel, .bills-carousel, .package-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 3rem 0;
+    padding: 0 35px;
+}
+
+.carouselDiv, .carouselDiv2, .carouselDiv3 {
+    max-width: 1150px;
+    width: 100%;
+    position: relative;
+    background-color: #3f5da4;
+    border: 5px solid #023047;
+    border-radius: 25px;
+}
+
+.carouselList, .carouselList2, .carouselList3 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    margin: 27px 33px;
+}
+
+.carouselList::-webkit-scrollbar, .carouselList2::-webkit-scrollbar, .carouselList3::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselDiv > i, .carouselDiv2 > i, .carouselDiv3 > i {
+    height: 50px;
+    width: 50px;
+    background-color: ghostwhite;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    box-shadow: 0 3px 6px black;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.carouselDiv #carouselArrowLeft, .carouselDiv2 #carouselArrowLeft2, .carouselDiv3 #carouselArrowLeft3 {
+    left: -28px;
+    transition: 0.5s ease;
+}
+
+.carouselDiv #carouselArrowLeft:hover, .carouselDiv2 #carouselArrowLeft2:hover, .carouselDiv3 #carouselArrowLeft3:hover {
+    background-color: #FFB703;
+}
+
+.carouselDiv #carouselArrowRight, .carouselDiv2 #carouselArrowRight2, .carouselDiv3 #carouselArrowRight3 {
+    right: -28px;
+    transition: 0.5s ease;
+}
+
+.carouselDiv #carouselArrowRight:hover, .carouselDiv2 #carouselArrowRight2:hover, .carouselDiv3 #carouselArrowRight3:hover {
+    background-color: #FFB703;
+}
+
+.carouselList :where(.carouselCard, .packageImageDiv), .carouselList2 :where(.carouselCard2, .packageImageDiv), .carouselList3 :where(.carouselCard3, .packageImageDiv) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselList.no-transition, .carouselList2.no-transition2, .carouselList3.no-transition3 {
+    scroll-behavior: auto;
+}
+
+.carouselList.dragging, .carouselList2.dragging2, .carouselList3.dragging3 {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carouselList.dragging .carouselCard, .carouselList2.dragging2 .carouselCard2, .carouselList3.dragging3 .carouselCard3 {
+    cursor: grabbing;
+    user-select: none;  
+}
+
+.carouselCard, .carouselCard2, .carouselCard3 {
+    list-style: none;
+    background: #7ca7e7;
+    border-radius: 10px;
+    height: auto;
+    scroll-snap-align: start;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.cardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.carouselImageDiv {
+    background-color: #0d0c60;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+}
+
+.carouselImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 4px solid ghostwhite;
+}
+
+.carouselTitle {
+    margin: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carouselTitle a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(12px, 6vw, 20px);
+    font-weight: bold;
+    transition: 0.3s ease;  
+}
+
+.carouselTitle a:hover {
+    color: #FFB703;
+    text-decoration: underline;
+}
+
+.carouselDescDiv {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    max-height: 120px;
+    word-wrap: break-word;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgba(127, 195, 232, 0.317);
+    padding: 12px;
+}
+
+.carouselDescDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselDesc {
+    color: black;
+    font-size: 0.8rem;
+}
+
+.cardBtnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardBtn {
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+#btnBookView {
+    background-color: #53cbe9;
+}
+
+#btnBookItin {
+    background-color: #53cbe9;
+}
+
+#btnBookView:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #53cbe9;
+}
+
+#btnBookItin:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #53cbe9;
+}
+
+#btnPkgView {
+    background-color: #FFB703;
+}
+
+#btnPkgView:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #FFB703;
+}
+
+#btnPkgBook {
+    background-color: #98CE00;
+}
+
+#btnPkgBook:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #98CE00;
+}
+
+.carouselBookInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    background-color: #85bbe7;
+    border: 2px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.carouselBookInfo .bookInfo {
+    font-size: 0.8rem;
+}
+
+.carouselBookInfo .bookInfo .bookLabel {
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1550px) {
+    .carouselDiv, .carouselDiv2 {
+        max-width: 1400px;
+        width: 100%;
+        position: relative;
+    }
+
+    .carouselList, .carouselList2 {
+        grid-auto-columns: calc((100% / 4) - 9px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carouselList, .carouselList2 {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carouselList, .carouselList2 {
+        grid-auto-columns: 100%;
+    }
+
+    .carouselImageDiv {
+        width: 80%
+    }
+
+    .carouselMoreBtn {
+        font-size: 0.75rem;
+    }
+
+    .main-container {
+        display: block;
+    }
+
+    .main-container aside, .main-container section {
+        margin-bottom: 40px;
+    }
+}

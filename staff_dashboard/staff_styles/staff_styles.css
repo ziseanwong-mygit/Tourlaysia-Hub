@@ -1,0 +1,18 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: staff_styles.css */
+/* Description: To create a universal style of Tourlaysia website, which is applied to every webpage. */
+/* Date first written: 9/7/2025 */
+/* Date last modified: 9/7/2025 */
+
+body {
+    background: radial-gradient(#eff6e0, #aec3b0, #598392);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+}
+
+p, span, a, ul, ol, button, input, select, textarea, table, tr, th, td {
+    font-family: Lucida Bright, Georgia, serif;
+}

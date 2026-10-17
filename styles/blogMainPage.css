@@ -1,0 +1,335 @@
+ /* Programmer Name: Seath Tan Ziren
+Project Name: blogMainPage.css
+Description: To design search blog page and info page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p {
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.title{
+    text-align: center;  
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .back-nav{
+    margin-left: 20px;
+}
+.back-nav button{
+    display: flex;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    background-color: #FFB703;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    h3{
+        margin-left: 10px;
+    }
+}
+
+.back-nav button:hover {
+  background-color: #eecf7f;
+}
+
+.back-nav img{
+    height: 20px; 
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 80%;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+}
+
+.search-bar button:hover {
+    background-color: #aaa;
+} */
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 10px 40px;
+    max-width: 1200px;
+    background-color: #219EBC;
+    gap: 20px;
+}
+
+.back-nav {
+    margin-bottom: 10px;
+}
+
+.back-nav button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    color: #000;
+    border: 2px solid #000;
+    background-color: #FFB703;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-nav button:hover {
+    background-color: #f0c36e;
+    transform: scale(1.03);
+}
+
+.back-nav img {
+    height: 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+}
+.search-bar form {
+    display: flex;
+    width: 100%;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 30px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+}
+
+.search-bar button:hover {
+    background-color: #999;
+}
+
+
+.latest,
+.all {
+    width: 95%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    margin: 4em auto;
+    padding: 2em;
+    align-items: center;
+    border-radius: 20px;
+    border: 4px solid #023047;
+    padding: 2em 3em;
+    /* Shadow effects */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow */
+        inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Inner glow */
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+    
+    /* Gradient background option */
+    background: linear-gradient(135deg, #8ECAE6 0%, #219EBC 100%);
+    
+    /* Text contrast */
+    color: #023047;
+}
+
+/* Hover effect */
+.latest:hover
+.all:hover {
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Optional: Animation on focus */
+
+.latest:focus-within,
+.all:focus-within {
+    box-shadow: 
+        0 0 0 3px rgba(33, 158, 188, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.all h2,
+.latest h2 { 
+    text-align: center;
+}
+
+.all-container,
+.latest-container{
+    display: flex;
+}
+
+.all-container-item,
+.latest-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    padding: 20px 10px;
+    border: 3px solid #023047;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #000;
+}
+.grid-card p{
+    margin: 0;
+}
+
+.grid-card img {
+    height: 120px;
+    width: 100%;
+}
+
+.grid-card button {
+    font-size: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #98ce00;
+    border: 2px solid #000;
+    text-decoration: none;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grid-card button:hover {
+    background-color: #a8e000; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.grid-card button:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.grid-card button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+@media (max-width: 1187px) {
+    .all-container-item.active,
+    .latest-item.active {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .main {
+        margin: 1em;
+    }
+    .all-container-item,
+    .latest-item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .grid-card img {
+        height: 90px;
+    }
+    .grid-card {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 590px) {
+    .latest,
+    .all {
+        padding: 1em;
+    }
+    .all-container-item,
+    .latest-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .grid-card p{
+        font-size: 0.8em;
+    }
+}

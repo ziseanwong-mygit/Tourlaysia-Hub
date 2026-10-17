@@ -1,0 +1,87 @@
+/* Programmer Name: Seath Tan Ziren
+Project Name: viewBook_ItinPage.css
+Description: To design view itinerary page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #005f73;
+}
+
+.description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.details p {
+  margin: 6px 0;
+  font-size: 0.98em;
+}
+
+.subheading {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #0a9396;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.itinerary-list {
+  margin-top: 20px;
+}
+
+.itinerary-item {
+  border-left: 4px solid #94d2bd;
+  background: #f1f1f1;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.itinerary-item p {
+  margin: 5px 0;
+}
+
+.action-btn {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: #219EBC;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background-color: #208da8;
+  color: #FFB703;
+}

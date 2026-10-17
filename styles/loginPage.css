@@ -1,0 +1,332 @@
+/* Programmer Name: Seath Tan Ziren
+Project Name: loginPage.css
+Description: To design login page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.banner {
+    width: 100%; 
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.banner-slogan {
+    width: 100%; 
+    text-align: center; 
+}
+
+.banner-slogan h1 {
+    font-size: 4em;
+    color: #fff;
+    margin: 0;
+    padding: 15px 30px;
+    font-weight: 900;
+    /* text-transform: uppercase; */
+    background: linear-gradient(90deg, rgba(228, 8, 8, 0.6), rgba(25, 9, 239, 0.6)); /* Gradient overlay */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+    display: flex;
+    padding: 40px 80px;
+    gap: 80px;
+    align-items: center;
+}
+
+.main .image-placeholder{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.main .image-placeholder img{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+}
+
+.login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #219EBC;
+    border-radius: 20px;
+    border: 4px solid #023047;
+    padding: 2rem;
+    /* Shadow effects */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow */
+        inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Inner glow */
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+    
+    /* Gradient background option */
+    background: linear-gradient(135deg, #8ECAE6 0%, #219EBC 100%);
+    
+    /* Text contrast */
+    color: #023047;
+}
+
+/* Hover effect */
+.login-form:hover {
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Optional: Animation on focus */
+.login-form:focus-within {
+    box-shadow: 
+        0 0 0 3px rgba(33, 158, 188, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.login-form h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.login-form small {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.instruction-box {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.instruction-box ol{
+    margin: 8px;
+}
+
+.instruction-box h4{
+    /* font-size: 0.85em; */
+    margin: 0;
+}
+
+.instruction-box li{
+    font-size: 0.9em;
+}
+
+.login-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+    font-size: 0.95em;
+    display: block;
+    margin-bottom: 5px;
+    span{
+        color: red;
+    }
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.forgot {
+    font-size: 0.8em;
+    color: #555;
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    background-color: #98ce00;
+    text-decoration: none;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-btn:hover {
+    background-color: #a8e000; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.login-btn:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.login-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+.login-btn.erase {
+    background-color: #D81159;
+}
+
+.login-btn.erase:hover {
+    background-color: #9B0C41;
+}
+
+.login-btn.erase:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(240, 49, 6, 0.4);
+}
+
+.login-btn.backBtn {
+    background-color: #FFB703;
+}
+
+.login-btn.backBtn:hover {
+    background-color: #C48E04;
+}
+
+.login-btn.backBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(240, 190, 6, 0.4);
+}
+
+/* For most tablet or small laptop sizes*/
+@media screen and (max-width: 1178px) {
+    .main .image-placeholder {
+        max-width: 270px;
+        max-height: 270px; 
+    }
+    .login-form {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px ;
+    }
+    .login-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        align-items: center;
+        gap: 50px;
+    }
+    .login-form h2 {
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
+    .login-btn {
+        margin-top: 10px;
+    }
+    .login-form{
+        width:95%;
+        padding: 10px 20px;
+    }
+    .banner-slogan h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* For most mobile phone sizes*/
+@media screen and (max-width: 590px) {
+    .main .image-placeholder {
+        max-width: 220px;
+        max-height: 220px; 
+    }
+    .login-form {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px ;
+    }
+    .login-form h2 {
+        font-size: 1.2em;
+    }
+    .login-form small {
+        font-size: 0.8em;
+    }
+    .banner-slogan h1 {
+        font-size: 1.5em;
+    }
+}

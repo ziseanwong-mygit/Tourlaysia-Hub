@@ -1,0 +1,183 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: package_results.css */
+/* Description: To style the package cards in the results page, including the grid layout module */
+/* Date first written: 8/7/2025 */
+/* Date last modified: 8/7/2025 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.results-title-desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-title {
+    margin: 0 30px 20px 30px;
+    font-size: 2.4rem;
+    color: #2634d1;
+    text-align: center;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+.results-desc {
+    font-size: 1.1rem;
+    margin: 0 30px 20px 30px;
+}
+
+.pkg-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.pkg-grid-card {
+    background-color: #69bbff;
+    padding: 16px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.package-pic {
+    background-color: #023047;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 4px solid rgb(218, 188, 255);
+    box-shadow: 0 0 15px 5px #52186c;
+}
+
+.pkg-title-div {
+    margin: 25px 0px;
+}
+
+.pkg-title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(64, 47, 196);
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.pkg-title:hover {
+    text-decoration: underline;
+    color: #FFB703;
+}
+
+.pkg-desc-div {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    max-height: 120px;
+    word-wrap: break-word;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgba(63, 146, 191, 0.317);
+    padding: 14px;
+}
+
+.pkg-desc {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.pkg-info-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    background-color: rgba(23, 39, 184, 0.4);
+    border: 2.5px solid rgb(58, 16, 155);
+    padding: 14px;
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.pkg-label {
+    color: #04f1f9;
+}
+
+.pkg-info {
+    font-size: 0.85rem;  
+}
+
+.pkg-btn-div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pkg-act-btn {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnView {
+    background-color: #FFB703;
+}
+
+#btnView:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #FFB703;
+}
+
+#btnBook {
+    background-color: #98CE00;
+}
+
+#btnBook:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #98CE00;
+}
+
+@media screen and (max-width: 400px) {
+  .pkg-grid-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .pkg-grid-card {
+    padding: 12px;
+  }
+
+  .pkg-title {
+    font-size: 1.2rem;
+  }
+
+  .pkg-desc {
+    font-size: 0.85rem;
+  }
+
+  .pkg-info {
+    font-size: 0.8rem;
+  }
+
+  .pkg-act-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .pkg-btn-div {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

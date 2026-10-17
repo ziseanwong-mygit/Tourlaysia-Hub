@@ -1,0 +1,203 @@
+ /* Programmer Name: Seath Tan Ziren
+Project Name: registerPage.css
+Description: To design search result page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+.main {
+    margin: 5em auto;
+    max-width: 700px;
+    border-radius: 20px;
+    border: 4px solid #023047;
+    /* Shadow effects */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Outer shadow */
+        inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Inner glow */
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+    
+    /* Gradient background option */
+    background: linear-gradient(135deg, #8ECAE6 0%, #219EBC 100%);
+    
+    /* Text contrast */
+    color: #000;
+}
+
+/* Hover effect */
+.main:hover {
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Optional: Animation on focus */
+.main:focus-within {
+    box-shadow: 
+        0 0 0 3px rgba(33, 158, 188, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.main h3 {
+    margin: 0;
+    padding: 0.5em 2em;
+}
+
+.main p {
+    padding-bottom: 0.7em;
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid #023047;
+}
+
+.main-content{
+    padding: 1em 2em;
+}
+
+.main-title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-button {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.main-content p img{
+    max-width: 150px;
+}
+
+.edit-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    border-radius: 20px;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    border: 2px solid #000;
+    background-color: #98ce00;
+    text-decoration: none;
+    color: #000; /* Better than inherit for consistent contrast */
+    font-weight: bold;
+    
+    /* Smooth transitions */
+    transition: all 0.2s ease-in-out;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.edit-btn:hover {
+    background-color: #77A105; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.edit-btn:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.edit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(152, 206, 0, 0.4);
+}
+
+.edit-btn.delete {
+    background-color: #D81159;
+}
+
+.edit-btn.delete:hover {
+    background-color: #9B0C41; /* Slightly lighter green */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.edit-btn.delete:active {
+    transform: translateY(0); /* Push down when clicked */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.edit-btn.delete:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(224, 55, 8, 0.4);
+}
+
+.pswd-container {
+    position: relative;
+    width: 40%;
+}
+
+.pswd-container input[type="password"], .pswd-container input[type="text"] {
+    margin-top: -10px;
+    width: 100%;
+    padding: 8px 40px 8px 10px;
+    font-size: 0.9rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.pswd-container i {
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #023047;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.pswd-container i.ri-eye-off-fill {
+    color: red;
+}
+
+
+@media screen and (max-width: 900px) {
+    .main {
+        width: 90%;
+    }
+    .main h3 {
+        font-size: 1em;
+    }
+    .edit-btn {
+        padding: 10px 20px;
+        font-size: 0.7em;
+    }
+
+}
+
+/* For most mobile phone sizes*/
+@media screen and (max-width: 590px) {
+    .main h3 {
+        font-size: 1em;
+    }
+    .main p {
+        font-size: 0.9em;
+    }
+    .main {
+        margin: 7em auto;
+    }
+   
+}

@@ -1,0 +1,396 @@
+/* Programmer Name: Seath Tan Ziren
+Project Name: index.css
+Description: To design index page to make it responsive to different devices and more interactive to use.
+Date first written: 14/6/2025 
+Date last modified: 26/6/2025  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p{
+  font-family: "Lucida Bright", Georgia, serif;
+}
+.register-login-container h3,
+.search-container h3{
+    text-align: center; 
+}
+h3 {
+    text-align: center;
+    margin-top: 3em; 
+}
+h4{
+    text-align: center;
+    font-size: 1.3em;
+}
+.banner {
+    position: relative; /* Establish positioning context */
+    width: 100%; /* Or your preferred width */
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.banner-slogan {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    width: 100%; 
+    text-align: center; 
+}
+
+.banner-slogan h1 {
+    font-size: 4em;
+    color: #fff;
+    margin: 0;
+    padding: 15px 30px;
+    font-weight: 900;
+    /* text-transform: uppercase; */
+    background: linear-gradient(90deg, rgba(88, 251, 1, 0.6), rgba(251, 163, 1, 0.6)); /* Gradient overlay */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* border: 3px solid white; */
+    /* display: inline-block;  */
+}
+
+.option-container {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* justify-content: center; */
+}
+
+.option-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    padding: 20px 10px;
+    border: 3px solid #023047;
+    border-radius: 10px;
+    background-image: linear-gradient(#1625cb, #8ECAE6);
+    font-size: 0.95em;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.option-button:hover {
+    background-image: linear-gradient(#13b7e5, #147cb9);
+}
+
+.option-button img {
+    height: 90px;
+    width: 90px;
+}
+
+.option-container p{
+    text-align: center;
+    margin: 2em;
+}
+
+.search-container{
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 3em 2em;
+}
+
+.slideshow-container{
+    max-width: 1100px;
+    padding: 1em 1em 2em 1em;
+    margin: 0 auto 7em auto;
+}
+
+.slideshow-container,
+.search-container{
+    box-sizing: border-box;
+    gap: 1em;
+    border: 3px solid #023047;
+    border-radius: 10px;
+    background-color: #8ECAE6;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item-images-box{
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-item {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item.active{
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item img{
+    width: 320px;
+    height: 200px;
+} 
+
+.carousel-item-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.grid-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-card-images-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.arrow {
+    background-color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.city:hover {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    max-width: 100%;
+    margin-top: 10px;
+}
+.search-bar form {
+    display: flex;
+    width: 100%;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #999;
+}
+
+.search-btn{
+    margin-left: 10px
+}
+
+.register-login-container{
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+.register-login-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    padding: 20px 10px;
+    border: 3px solid #023047;
+    border-radius: 10px;
+    background-color: #8ECAE6;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.register-login-btn {
+    text-decoration: none;
+    background-color: #219EBC;
+    color: black;
+    font-size: 1.0rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 3px solid ghostwhite;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.register-login-btn:hover {
+    background-color: #14596b;
+    color:#FFB703;
+}
+
+
+@media screen and (max-width: 1178px) {
+    .option-continer,
+    .search-container,
+    .slideshow-container{
+        width: 98%;
+    }
+    .grid-card-images-box img{
+        width: 280px;
+        height: 170px;
+    } 
+    .arrow {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .grid-card-images-box img{
+        width: 240px;
+        height: 140px;
+    }
+    .banner-slogan h1 {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 870px) {
+    .grid-card-images-box img{
+        width: 200px;
+        height: 110px;
+    }
+    .city {
+        max-width: 60px;
+        font-size: 10px;
+    }
+    .option-button img {
+        height: 70px;
+        width: 70px;
+    }
+
+}
+@media screen and (max-width: 780px) {
+    .grid-card-images-box{
+        grid-template-columns: 1fr;
+    }
+    .city {
+        max-width: 55px;
+        font-size: 9px;
+    }
+    .carousel-item img{
+        width: 350px;
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .grid-card-images-box img{
+        width: 157px;
+        height: 90px;
+    }
+    .banner-slogan h1 {
+        font-size: 2em;
+    }
+    .carousel-item img{
+        width: 300px;
+        height: 150px;
+    }
+}
+
+/* For most mobile phone sizes*/
+@media screen and (max-width: 590px) {
+    h3 {
+        text-align: center;
+        margin-top: 2em; 
+    }
+    h4{
+        text-align: center;
+        font-size: 1em;
+    }
+    .banner-slogan h1 {
+        font-size: 1.5em;
+    }
+    .option-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .option-button{
+        font-size: 0.8em;
+    }
+    .option-button img {
+        height: 60px;
+        width: 60px;
+    }
+    .city {
+        max-width: 42px;
+        font-size: 8px;
+    }
+    .carousel-item-content{
+        gap: 2px;
+    }
+
+
+}
+
+@media screen and (max-width: 420px) {
+    .search-bar button {
+        width: 40px
+    }
+    .carousel-item img{
+        width: 260px;
+        height: 130px;
+    }
+}

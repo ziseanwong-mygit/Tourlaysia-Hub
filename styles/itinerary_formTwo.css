@@ -1,0 +1,289 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: itinerary_form.css */
+/* Description: To style the itinerary form for both itinerary_formOne and itinerary_formTwo */
+/* Date first written: 8/7/2025 */
+/* Date last modified: 9/7/2025 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+/* Title and description styling */
+.itin-title-desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itin-title {
+    margin: 0 30px 20px 30px;
+    font-size: 2.4rem;
+    color: #2a7ee4;
+    text-align: center;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+.itin-desc-div {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.itin-inst-div {
+    width: 70%;
+    margin-bottom: 35px;
+    background-color: #2a7ee4c9;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.inst-list {
+    padding-left: 30px;
+    line-height: 1.5;
+    list-style-position: inside;
+}
+
+.inst-list li:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+.itin-desc span {
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
+    color: yellow;
+    font-weight: bold;
+}
+
+
+/* Form styling */
+.itin-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;        
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    background-color: #8ECAE6;
+    border: 5px solid #023047; 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    gap: 10px;
+    transition: max-width 0.5s ease;
+}
+
+.itin-form form {
+    overflow-y: hidden;
+}
+
+.label-row-div, .input-row-div, .combine-row-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.label-field-div, .input-field-div, .combine-field-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3px;
+    flex: 1 1;
+}
+
+.label-field-div {
+    max-width: 16%;
+}
+
+.label-field-div.day {
+    max-width: 10%;
+}
+
+.label-field-div.activity {
+    max-width: 36%;
+}
+
+.input-field-div {
+    max-width: 16%;
+}
+
+.input-field-div.day {
+    max-width: 10%;
+}
+
+.input-field-div.activity {
+    max-width: 36%;
+}
+
+.label-field-div label, .combine-field-div label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.label-field-div label span, .combine-field-div label span {
+    color: red;
+}
+
+.input-field-div input, .combine-field-div input {
+    font-size: 0.8rem;
+    height: 35px;
+    padding: 8px;
+    border: 2px solid #023047;
+    border-radius: 5px;
+}
+
+.input-field-div button, .combine-field-div button {
+    font-size: 0.8rem;
+    height: 35px;
+    padding: 8px;
+    border: 2px solid #023047;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    font-weight: bold;
+}
+
+.input-field-div .add-field-btn, .combine-field-div .add-field-btn {
+    background-color: #98CE00;
+}
+
+.input-field-div .delete-field-btn, .combine-field-div .delete-field-btn {
+    background-color: #D81159;
+}
+
+.input-field-div button:hover, .combine-field-div button:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.input-field-div .add-field-btn:hover, .combine-field-div .add-field-btn:hover {
+    background-color: #77A105;
+    color: lime;
+}
+
+.input-field-div .delete-field-btn:hover {
+    background-color: #9B0C41;
+    color: red;
+}
+
+.form-buttons-div, .combine-FormButtons-div {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.form-buttons-div button, .combine-FormButtons-div button {
+    padding: 7px;
+    border: 3px solid #023047;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+
+.form-buttons-div button[name="subItinForm"], .combine-FormButtons-div button[name="subItinForm2"] {
+    background-color: #98CE00;
+}
+
+.form-buttons-div button[name="eraseData"], .form-buttons-div button[name="delAllRows"], .combine-FormButtons-div button[name="eraseData"], .combine-FormButtons-div button[name="delAllRows"] {
+    background-color: #D81159;
+}
+
+.form-buttons-div button[name="backToSec"], .combine-FormButtons-div button[name="backToSec"] {
+    background-color: #FFB703;
+}
+
+.form-buttons-div button[name="subItinForm"]:hover, .combine-FormButtons-div button[name="subItinForm2"]:hover {
+    background-color: #77a105;
+    color: lime;
+}
+
+.form-buttons-div button[name="eraseData"]:hover, .form-buttons-div button[name="delAllRows"]:hover, .combine-FormButtons-div button[name="eraseData"]:hover, .combine-FormButtons-div button[name="delAllRows"]:hover {
+    background-color: #9b0c41;
+    color: red;
+}
+
+.form-buttons-div button[name="backToSec"]:hover, .combine-FormButtons-div button[name="backToSec"]:hover {
+    background-color: #C48E04;
+    color: yellow;
+}
+
+
+/* When width screen is over 985px, design 2 elements are hidden */
+@media screen and (min-width: 986px) {
+    .design-2 {
+        display: none;
+    }
+}
+
+/* Responsive design for tablets, mobile phones and smaller desktop screens */
+@media screen and (max-width: 985px) {
+    .itin-form {
+        max-width: 600px; 
+    }
+
+    .design-1 {
+        display: none;
+    }
+
+    .combine-FormButtons-div button {
+        font-size: 0.8rem;
+    }
+
+    .combine-row-div {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .combine-field-div label {
+        font-size: 1rem;
+    }
+
+    .combine-field-div input {
+        width: 100%;
+    }
+
+    .combine-field-div button {
+        width: 100%;
+    }
+
+    .combine-FormButtons-div {
+        display: block;
+        margin-bottom: -10px;
+    }
+
+    .combine-FormButtons-div button {
+        padding: 7px;
+        font-size: 0.8rem;
+        transition: 0.5s ease;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .itin-form {
+        max-width: 500px; 
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .itin-form {
+        max-width: 400px; 
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .itin-form {
+        max-width: 300px; 
+    }
+}

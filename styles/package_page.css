@@ -1,0 +1,307 @@
+/* Programmer Name: Wong Zi Sean, Group Leader of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: package_page.css */
+/* Description: To style the elements in package_page.php like carousels and cards. */
+/* Date first written: 25/6/2025 */
+/* Date last modified: 27/6/2025 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.packageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.packageHeader h1 {
+    font-size: 2.4rem;
+    padding-bottom: 15px;
+    color: #2634d1;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+.pkgHeadDesc {
+    width: 70%;
+}
+
+.pkgHeadDesc p {
+    line-height: 1.5;
+}
+
+.pkgHeadDesc p mark {
+    background-color:#fbf9b4;
+}
+
+.carouselBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0 7rem 0;
+    padding: 0 35px;
+}
+
+.packageSection, .packageSection2, .packageSection3 {
+    max-width: 1150px;
+    width: 100%;
+    position: relative;
+    background-color: #8ECAE6;
+    border: 5px solid #023047;
+    border-radius: 25px;
+}
+
+.packageCarousel, .packageCarousel2, .packageCarousel3 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    margin: 27px 33px;
+}
+
+.packageCarousel::-webkit-scrollbar, .packageCarousel2::-webkit-scrollbar, .packageCarousel3::-webkit-scrollbar {
+    display: none;
+}
+
+.packageSection > i, .packageSection2 > i, .packageSection3 > i {
+    height: 50px;
+    width: 50px;
+    background-color: ghostwhite;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    box-shadow: 0 3px 6px black;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.packageSection #carouselArrowLeft, .packageSection2 #carouselArrowLeft2, .packageSection3 #carouselArrowLeft3 {
+    left: -28px;
+    transition: 0.5s ease;
+}
+
+.packageSection #carouselArrowLeft:hover, .packageSection2 #carouselArrowLeft2:hover, .packageSection3 #carouselArrowLeft3:hover {
+    background-color: #FFB703;
+}
+
+.packageSection #carouselArrowRight, .packageSection2 #carouselArrowRight, .packageSection3 #carouselArrowRight {
+    right: -28px;
+    transition: 0.5s ease;
+}
+
+.packageSection #carouselArrowRight:hover, .packageSection2 #carouselArrowRight:hover, .packageSection3 #carouselArrowRight:hover {
+    background-color: #FFB703;
+}
+
+.packageCarousel :where(.packageCard, .packageImageDiv), .packageCarousel2 :where(.packageCard2, .packageImageDiv), .packageCarousel3 :where(.packageCard3, .packageImageDiv) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.packageCarousel.no-transition, .packageCarousel2.no-transition2, .packageCarousel3.no-transition3 {
+    scroll-behavior: auto;
+}
+
+.packageCarousel.dragging, .packageCarousel2.dragging2, .packageCarousel3.dragging3 {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.packageCarousel.dragging .packageCard, .packageCarousel2.dragging2 .packageCard2, .packageCarousel3.dragging3 .packageCard3 {
+    cursor: grabbing;
+    user-select: none;  
+}
+
+.packageCard, .packageCard2, .packageCard3 {
+    list-style: none;
+    background: #69bbff;
+    border-radius: 10px;
+    height: auto;
+    scroll-snap-align: start;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.cardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.packageImageDiv {
+    background-color: #023047;
+    width: 100%;
+    height: 100%;
+}
+
+.packageImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 4px solid ghostwhite;
+}
+
+.packageTitle {
+    margin: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.packageTitle a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(12px, 6vw, 20px);
+    font-weight: bold;
+    transition: 0.3s ease;  
+}
+
+.packageTitle a:hover {
+    color: #FFB703;
+    text-decoration: underline;
+}
+
+.packageDescDiv {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    max-height: 120px;
+    word-wrap: break-word;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgba(63, 146, 191, 0.317);
+    padding: 12px;
+}
+
+.packageDescDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.packageDesc {
+    color: black;
+    font-size: 0.8rem;
+}
+
+.carouselHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #145c6d;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 5px solid black;
+}
+
+.carouselHeadTitle {
+    color: ghostwhite;
+    font-size: 1.8rem;
+}
+
+.carouselMoreBtn {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: clamp(12px, 2vw, 20px);
+    transition: 0.5s ease;
+}
+
+.carouselMoreBtn:hover {
+    background-color: #FFB703;     
+}
+
+.cardBtnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardBtn {
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+#btnView {
+    background-color: #FFB703;
+}
+
+#btnView:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #FFB703;
+}
+
+#btnBook {
+    background-color: #98CE00;
+}
+
+#btnBook:hover {
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px #98CE00;
+}
+
+@media screen and (min-width: 1550px) {
+    .packageSection, .packageSection2, .packageSection3{
+        max-width: 1400px;
+        width: 100%;
+        position: relative;
+    }
+
+    .packageCarousel, .packageCarousel2, .packageCarousel3 {
+        grid-auto-columns: calc((100% / 4) - 9px);
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .packageCarousel, .packageCarousel2, .packageCarousel3 {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    .carouselHeadTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .packageCarousel, .packageCarousel2, .packageCarousel3 {
+        grid-auto-columns: 100%;
+    }
+
+    .packageImageDiv {
+        width: 80%
+    }
+
+    .carouselHeadTitle {
+        font-size: 1.2rem;
+    }
+
+    .carouselMoreBtn {
+        font-size: 0.75rem;
+    }
+}

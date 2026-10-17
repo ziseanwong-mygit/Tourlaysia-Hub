@@ -1,0 +1,201 @@
+/* Programmer Name: Vun Jin Quan, Group Member of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: styles_SD.css */
+/* Description: To style the universal layout for Staff_Dashboard.php*/
+/* Date first written: 26/6/2025 */
+/* Date last modified: 1/7/2025 */
+
+body {
+    margin: 0;
+}
+
+.h1 {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.7s ease;
+}
+
+.h1:hover {
+    color: #ffffff;
+    font-size: 1.8/rem;
+    font-weight: lighter;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #219EBC;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #D81159;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.menu-icon :hover {
+  color: #D81159;
+}
+
+.menu-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Profile section */
+.staff-profile {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.username2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Dashboard buttons */
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.action-box {
+  background-color: #FFB703;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-box:hover {
+  transform: translateY(-4px);
+}
+
+.action-box i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% black */
+  z-index: 998; /* below sidebar which is z-index: 999 */
+  display: none;
+}
+
+.action-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mobile (max 600px) */
+@media screen and (max-width: 600px) {
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .action-box {
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .username2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Mini Tablet (600–900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .dashboard-actions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .action-box {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .username2 {
+    font-size: 1.3rem;
+  }
+}

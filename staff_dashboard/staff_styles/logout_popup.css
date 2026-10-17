@@ -1,0 +1,106 @@
+/* Popup box styling */
+.popupBox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 50px;
+}
+
+.popup-form {
+    background-color: #219EBC;
+    margin: 5% auto 15% auto;
+    border: 5px solid #FFB703;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: ghostwhite;
+    transition: color 0.5s ease;
+}
+
+.closeIcon:hover,
+.closeIcon:focus {
+    color: #D81159;
+    cursor: pointer;
+}
+
+.popup-form-div {
+    padding: 40px;
+    text-align: center;
+}
+
+.popup-form-div h1, .popup-form-div p {
+    padding-bottom: 20px;
+}
+
+.popup-form-div p span {
+    color: yellow;
+    font-weight: bold;
+}
+
+.cancelbtn, .deletebtn {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    float: left;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 4px solid #023047;
+    border-bottom: 4px solid #023047;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.cancelbtn {
+    background-color: #dcdada;
+    border-left: 4px solid #023047;
+    border-right: 4px solid #023047;    
+}
+
+.deletebtn {
+    background-color: #D81159;
+    border-right: 4px solid #023047;
+}
+
+.cancelbtn:hover {
+    background-color: #acacac;
+    color: ghostwhite;
+}
+
+.deletebtn:hover {
+    background-color: #9B0C41;
+    color: red;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 400px) {
+    .cancelbtn, .deletebtn {
+        width: 100%;
+    }
+
+    .deletebtn {
+        background-color: #D81159;
+        border-left: 4px solid #023047;
+    }
+}

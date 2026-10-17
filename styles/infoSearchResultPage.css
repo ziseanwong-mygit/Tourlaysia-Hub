@@ -1,0 +1,168 @@
+/* Programmer Name: Tei Yu Hong, Group Member of Peaky Blinders, AAPP011-4-2 Capstone Project */
+/* Project Name: infoSearchResultPage.css */
+/* Description: To style infoSearchResultPage.php */
+/* Date first written: 1/7/2025 */
+/* Date last modified: 13/7/2025 */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rockwell", "Rockwell Nova", "Courier Bold", Courier, Georgia, serif;
+}
+
+p {
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+/* Layout */
+.main {
+  margin: 0 2em 5em 2em;
+}
+
+.main h1 {
+  text-align: center;
+}
+
+/* Result count centered */
+.results-header {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* Back button styling */
+.back-nav {
+  margin-left: 20px;
+}
+
+.back-nav button {
+  display: flex;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  background-color: #FFB703;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.back-nav button h3 {
+  margin-left: 10px;
+}
+
+.back-nav button:hover {
+  background-color: #eecf7f;
+}
+
+.back-nav img {
+  height: 20px; 
+  cursor: pointer;
+}
+
+/* Card grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Individual card style */
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 10px;
+  border: 3px solid #023047;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #000;
+}
+
+.result-card:hover {
+  background-color: #eee;
+}
+
+.result-card img {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+/* View button */
+.view-btn {
+  background-color: #8ecae6;
+  color: #023047;
+  border: 2px solid #219ebc;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.view-btn:hover {
+  background-color: #219ebc;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.view-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.view-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33, 158, 188, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1187px) {
+  .results-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    margin: 1em;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .result-card img {
+    height: 90px;
+  }
+
+  .result-card {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 590px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
